@@ -193,12 +193,12 @@ export function Hero() {
                   <div className="text-center">
                     <div className="w-80 h-80 mx-auto mb-3 rounded-full overflow-hidden animate-pulse border-2 border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.5)]">
                       <Image
-                        src="/avatar.png"
-                        alt="Avatar"
-                        width={200}
-                        height={200}
-                        className="w-full h-full object-cover"
-                      />
+                      src="/Avatar.png"
+                      alt="Avatar"
+                      width={200}
+                      height={200}
+                      className="w-full h-full object-cover"
+/>
                     </div>
                     <p className="text-emerald-500 font-mono text-2xl font-bold tracking-[0.15em]">
   ✨مُحَمَّ صُهَيْب✨
