@@ -15,7 +15,6 @@ import { Terminal } from "@/components/chat/terminal";
 import { AIChat } from "@/components/chat/ai-chat";
 import { MiniAvatar } from "@/components/chat/mini-avatar";
 import { ThemeSwitcher } from "@/components/effects/theme-switcher";
-import { AmbientMusic } from "@/components/effects/ambient-music";
 import { EasterEggs } from "@/components/effects/easter-eggs";
 import { AchievementProvider, useAchievements } from "@/components/effects/achievement-system";
 
@@ -38,7 +37,6 @@ function ShellContent({ children }: { children: React.ReactNode }) {
       <ScrollProgress />
       <Navbar />
       <ThemeSwitcher />
-      <AmbientMusic />
       <main>{children}</main>
       <CommandPalette />
       <Terminal />
