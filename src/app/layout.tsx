@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono, Inter,Noto_Sans_Arabic, Noto_Sans_Tamil, } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { SmoothScroll } from "@/providers/smooth-scroll";
 import { ParticlesInitProvider } from "@/providers/particles-provider";
@@ -92,6 +93,7 @@ export default function RootLayout({
             </ParticlesInitProvider>
           </SmoothScroll>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
