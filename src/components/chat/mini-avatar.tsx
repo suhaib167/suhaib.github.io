@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const messages = [
   "Hi, I'm Suhaib 👋",
@@ -54,13 +55,23 @@ export function MiniAvatar() {
       </AnimatePresence>
 
       <motion.button
-        onClick={handleClick}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/20 cursor-pointer"
-      >
-        <span className="text-2xl">🤖</span>
-      </motion.button>
+  onClick={handleClick}
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.9 }}
+  animate={{ y: [0, -4, 0] }}
+  transition={{ duration: 2, repeat: Infinity }}
+  className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.4)] cursor-pointer"
+>
+  <Image
+    src="/Avatar.png"
+    alt="Avatar"
+    fill
+    className="object-cover"
+    sizes="56px"
+  />
+
+  <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-black animate-pulse" />
+</motion.button>
     </div>
   );
 }
